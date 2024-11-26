@@ -12,6 +12,7 @@
         <h1>Custom Config Documentation</h1>
         <div class="Documentation_Navigation">
             <h2>Documentation Navigation</h2>
+            <a href="../index.html">Back</a>
             <ul>
                 <li><a href="#prelude">Prelude</a></li>
                 <li><a href="#syntax">Syntax</a></li>
@@ -20,6 +21,8 @@
                 <ul>
                     <li><a href="#bl_start">bl_start</a></li>
                     <li><a href="#bl_end">bl_end</a></li>
+                    <li><a href="#bl_other">bl_other</a></li>
+                    <li><a href="#bl_all">bl_all</a></li>
                 </ul>
                 <li><a href="#other_statements">Other Statements</a></li>
                 <ul>
@@ -56,12 +59,16 @@
         <div class="Blacklist" id="blacklist">
             <h2>Blacklist</h2>
             <p>Finally we come to the statements themselves, let's look at the most basic and useful part, the blacklist</p>
-            <p>The blacklist is divided into two statements so far, <code>bl_start</code> and <code>bl_end</code>, both of them accept values that we want to forbid, let's consider <code>bl_start</code> first, because their working system is almost the same</p>
             <h3 id="bl_start">bl_start</h3>
             <p><code>bl_start: a;</code> it forbids us to insert the letter a into the string, which gives us full control over the beginning, what letters we want to see at the beginning of our string and what letters we don't want to see</p>
             <p>Yes, that's all, but it gives us a huge advantage for creating some specific strings if used properly</p>
             <h3 id="bl_end">bl_end</h3>
             <p><code>bl_end: a;</code> is actually the same, but as you can see from the statement itself, it forbids using values as the end of a string</p>
+            <h3 id="bl_other">bl_other</h3>
+            <p><code>bl_other: a;</code> also performs the same actions as the previous two statements, but only inside the string without touching its edges</p>
+            <h3 id="bl_all">bl_all</h3>
+            <p><code>bl_all: a;</code> combines all of its earlier brethren and removes any character from the string</p>
+
             <p>This is actually the magic of the blacklist, to forbid characters in certain places</p>
         </div>
 
@@ -80,7 +87,7 @@
             <h2>Conclusion</h2>
             <p>Anyway, this documentation was made for the sake of dilution and for the sake of gaining experience for documentation creation, I hope it will be useful to me someday and I hope you enjoyed this documentation</p>
             <p>The more the project lives, the more features you will find here</p>
-            <p class="subtext">I also hope you will visit my <a href="https://github.com/kynlux">github</a></p>
+            <p class="subtext">I also hope you will visit my <a href="https://github.com/kynlux">github</a> and follow me on <a href="https://www.roblox.com/users/7511144303/profile">roblox</a>!</p>
         </div>
     </div>
 </body>
