@@ -1,0 +1,14 @@
+.wrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: 13px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+}
+
+.subtext {
+    opacity: 0.75;
+}
