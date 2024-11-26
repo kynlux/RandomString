@@ -114,17 +114,22 @@ const create_pswd = () => {
         if (!added) {
             if (options.characters && !added) {
                 const char = options.uppercase ? characters.charAt(range_number(0, characters.length)).toUpperCase() : characters.charAt(range_number(0, characters.length));
-                if (check_blacklist(char, i, options.length))
-                    result += i == 1 && options.custom_cmd == "uс_first" ? char.toUpperCase() : char;
+                while (!check_blacklist(char, i, options.length)) 
+                    char = options.uppercase ? characters.charAt(range_number(0, characters.length)).toUpperCase() : characters.charAt(range_number(0, characters.length));
+                    
+                result += i == 1 && options.custom_cmd == "uс_first" ? char.toUpperCase() : char;
             } else if (options.numbers && !added) {
                 const char = numbers.charAt(range_number(0, numbers.length)).toString();
-                if (check_blacklist(char, i, options.length))
-                    result += char;
+                while (!check_blacklist(char, i, options.length))
+                    char = numbers.charAt(range_number(0, numbers.length)).toString();
+
+                result += char;
             } else if (options.symbols && !added) {
                 if (Math.random() >= 0.5) {
                     const char = symbols.charAt(range_number(0, symbols.length)).toString();
-                    if (check_blacklist(char, i, options.length)) 
-                        result += char;
+                    while (!check_blacklist(char, i, options.length)) 
+                        char = symbols.charAt(range_number(0, symbols.length)).toString();
+                    result += char;
                 }
             }
         }
